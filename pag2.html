@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assest/ccss/sstyle.css">
+</head>
+<body>
+
+    <div class="Cont">
+    <div class="cardheader">
+        
+    </div>
+    <div id="card_body">
+
+        
+
+       
+        <h1>FAQ</h1>
+        <div class="cc">
+<diV class="card-header FAQ">What Is an Attribute in HTML?</diV>
+<div class ="card-body Ans">Attributes are the properties that can be added to an HTML tag that change the way the tag behaves or is displayed.</div>
+</div>
+
+<div class="cc">
+    <diV class="card-header FAQ">What is Marquee in HTML?</diV>
+    <div class ="card-body Ans">The marquee is used to scroll the text on the webpage.
+        ,It automatically scrolls the image or text up, down, left, or right.</div>
+    </div>
+
+    <div class="cc">
+        <diV class="card-header FAQ">What is Semantic HTML?</diV>
+        <div class ="card-body Ans">Semantic HTML is a type of coding.</div>
+        </div>
+
+        <div class="cc">
+            <diV class="card-header FAQ">Which Property is used to Underline text , Strikethrough, and Overline Text?</diV>
+            <div class ="card-body Ans">text-style, Text-type, text-decoration,Text-transform</div>
+            </div>
+</diV>
+</div>
+</div>
+</body>
+</body>
+   <script src="assest/js/jquery-3.6.0.min.js">
+
+
+
+   </script>
+
+   <script>
+       $(`.FAQ`).click(function(e){
+       $(this).closest(`.cc`).find(`.Ans`).show();
+
+      });
+
+      $(`.Ans`).click(function(e){
+        $(this).closest(`.cc`).find(`.Ans`).hide();
+
+
+      });
+
+   </script>
+</body>
+</html>

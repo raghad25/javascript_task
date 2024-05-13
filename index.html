@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assest/ccss/sstyle.css">
+</head>
+<body>
+
+    <div class="Cont">
+    <div id="cardheader">
+        <h1>Unvirsty View</h1>
+    </div>
+    <div id="card_body">
+
+        <div class="gr-body">
+            <select name="sselect" id="unv" onchange = (selectUn())>
+                <option value="1"></option>
+            </select>
+            
+        </div>
+
+        <div class="table-view">
+<table>
+           <tr>
+            <th>Id</th>
+            <th>name</th>
+           </tr>
+
+           <tr>
+            <td>none</td>
+            <td>none</td>
+           </tr>
+</table>
+        </div>
+
+    </div>
+
+
+
+
+    </div>
+
+   <script>
+    
+    var obj={
+    "unv":{
+     
+        "bzu":{
+         phone:"1,2,3",
+         add:"Ramallah",
+
+        coll:[
+        { 
+            id:1,
+            name:"it",
+            "special":[
+
+                {
+                id:"1",
+                name:"CE"
+                 }
+                 ]
+            }
+         ]
+     }
+    },
+
+    getUn:function(name){
+        return this.unv[name];
+    },
+    getAllColl:function(name){
+        return this.getUn(name).coll;
+    },
+
+    getColl:function(uname,name){
+    return this.getUn(uname).coll.find(function(coll){return coll.name==name});
+    },
+    getAllspcial:function(unname,name){
+        return this.getColl(unname,name).special;
+    },
+    getSpe:function(uname,name,sp){
+        return this.getAllspcial(uname,name).find(function(sp){return special.name==sp});
+    }
+
+    }
+    console.log(obj.getUn("bzu"));
+    console.log(obj.getAllColl("bzu"));
+    console.log(obj.getColl("bzu","it"));
+    console.log(obj.getAllspcial("bzu","it"));
+    var un=obj.getUn();
+    console.log(unv);
+
+    un='<option value="" disabled selected>SSeelect univversty </option>';
+    Object.keys(obj.unv).forEach(element =>{
+       un += `<option value="${element}">${element}</option>`
+    });
+    document.getElementById('unv').innerHTML=un;
+
+    function selectUn(event) {
+      uname=event.target.value;
+      var colll=unv.getAllColl (uname);
+      console.log(colll)
+      ht='';
+      colll.forEach(element => {
+       ht+= `<tr><td> ${element.id}</td><td>element.name</td></tr>`;
+      });
+      document.getElementById('unv').innerHTML=ht;
+     
+
+    }
+   </script> 
+</body>
+</html>

@@ -1,0 +1,69 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Ibarra+Real+Nova:ital@0;1&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+  }
+  body{
+	background-color:#bacec1;
+  }
+  .Cont{
+   
+    min-height: 330px;
+    width: 80%;
+    margin: auto;
+    margin-top: 15vh;
+  }
+  #cardheader{
+    background-color: #ccc;
+    padding: 10px;
+
+  }
+  h1{
+    font-family: 'Dancing Script', cursive;
+    font-family: 'Ibarra Real Nova', serif;
+   font-size: 48px;
+   color:#e59560;
+  }
+  .gr-body select{
+    padding: 20px;
+    width: 100%;
+  }
+
+  .gr-body{
+    margin-bottom: 20px;
+  }
+  table{
+    width: 100%;
+    border: 1px solid black;
+    border-spacing: 0;
+    width: cal(100% -10px);
+
+  }
+  table td{
+    width: 50%;
+    padding: 3px;
+    border: 1px solid black;
+  }
+
+  .Ans{
+    display: none;
+    margin-top: 20px;
+    background-color: #f6f4e8;
+    font-size: 20px;
+    color:#e59560;
+    padding: 20px;
+    width:70%;
+    font-family: 'Playfair Display', serif !important;
+  }
+  .FAQ {
+   background-color:#1d3124 ;
+   margin-top: 20px;
+   padding :20px;
+   font-size: 20px;
+   color: #bacec1;
+   width: 70%;
+   border-radius: 10px;
+  }

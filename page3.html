@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assest/ccss/sstyle.css">
+</head>
+<body>
+    
+    <script src="assest/js/jquery-3.6.0.min.js"></script>
+    <button>Click</button>
+    <input type="text">
+  <select name="" id="">
+
+    <option value="">num1</option>
+    <option value="">num2</option>
+    <option value="">num3</option>
+
+
+
+
+  </select>
+  
+  <script>
+$(document).ready (function(){
+
+    $("button").click(
+     function(){
+         alert("btn click");
+     });
+});
+
+$("input").change( function(){
+    alert(" input change");
+});
+     
+
+$("select").change( function(){
+    alert("Select has been changed");
+});
+
+$(window).scroll( function(){
+    console.log("windos has scrolled");
+
+});
+//$(`selector`.on(event(s),childselector,data,function,map);
+  </script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="assest/ccss/key.css"> -->
+
+</head>
+<body>
+    
+    <script src="assest/js/jquery-3.6.0.min.js"></script>
+    <script src="assest/js/download.json"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js">
+    </script>
+    
+ajax from server
+
+
+<header>
+    <h4> Logo</h4>
+    <ul>
+        <li class="list-item"><a href="#">Home</a></li>
+        <li class="list-item"><a href="#">About us</a></li>
+        <li class="list-item"><a href="#">Login</a></li>
+
+    </ul>
+</header>
+
+<section>
+
+<div id="display"></div>
+<input type="text" name="text" id="forms" placeholder="tayping here">
+<table> 
+    <tbody id="Thbody">
+       
+            <tr>
+              <td></td>
+              <td></td>
+            </tr>
+           
+    </tbody>
+</table>
+
+
+
+</section>
+<script>
+ 
+    $(document).ready(function () {
+
+    $.ajax({
+    url: "https://ipapi.co/json/",
+    type: "get",
+    dataType: "json",
+    data:{},
+    success:function(res){
+    var result_html='';
+    $.each(res,function(key,value){
+    result_html +=`<tr><td>${key}</td><td>${value}<td></tr>`
+
+});
+$('#Thbody').html(result_html);
+  },
+  error:function(res){
+    console.log(res)
+  }
+   
+
+})
+
+    });
+
+
+
+    
+</script>
+</body>
+</html>
